@@ -79,28 +79,18 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Invoice" sap:VirtualizedContainerService.HintSize="480,216" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[New String() {&quot;INV-001&quot;, &quot;INV-002&quot;, &quot;INV-003&quot;}]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Invoice" sap:VirtualizedContainerService.HintSize="480,168" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[New String() {&quot;INV-001&quot;, &quot;INV-002&quot;, &quot;INV-003&quot;}]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="invoiceId" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,144" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,96" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:AddQueueItem TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="Studio_Demo_DEV" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="AddQueueItem_3" Priority="Normal" QueueType="InvoiceQueue" Reference="[invoiceId]">
-              <ui:AddQueueItem.ItemInformation>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-              </ui:AddQueueItem.ItemInformation>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:AddQueueItem>
             <ui:LogMessage DisplayName="Log Queued" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Queued &quot; &amp; invoiceId]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
